@@ -30,10 +30,9 @@ class Main extends PluginBase {
       $player = $sender->getPlayer();
       
       if($label === "vanish") {
-        $online = $this->getServer()->getOnlinePlayers();
-        $online.hidePlayer($player);
-        $sender->sendMessage(TextFormat::GREEN."You have successfully vanished!.");
-        return true;
+        foreach($this->getServer()->getOnlinePlayers() as $online){
+          $online->hidePlayer($player);
+        }
       }
     } else {
       $sender->sendMessage(TextFormat::RED."Only players can use this command.");
