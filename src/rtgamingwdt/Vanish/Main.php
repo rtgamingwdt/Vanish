@@ -32,6 +32,14 @@ class Main extends PluginBase {
       if($label === "vanish") {
         foreach($this->getServer()->getOnlinePlayers() as $online){
           $online->hidePlayer($player);
+          $sender->sendMessage(TextFormat::GREEN."You have been successfully Vanished!");
+        }
+      }
+      
+      if($label === "unvanish") {
+        foreach($this->getServer()->getOnlinePlayers() as $online){
+          $online->showPlayer($player);
+          $sender->sendMessage(TextFormat::GREEN."You have been successfully Unvanished!");
         }
       }
     } else {
