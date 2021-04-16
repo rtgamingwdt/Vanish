@@ -7,3 +7,6 @@ version: 1.0.0
 commands:
   vanish:
     description: "Vanish for PocketMine-MP."
+    
+  unvanish:
+    description: "Unvanish for PocketMine-MP."
