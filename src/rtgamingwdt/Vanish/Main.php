@@ -30,16 +30,24 @@ class Main extends PluginBase {
       $player = $sender->getPlayer();
       
       if($label === "vanish") {
-        foreach($this->getServer()->getOnlinePlayers() as $online){
-          $online->hidePlayer($player);
-          $sender->sendMessage(TextFormat::GREEN."You have been successfully Vanished!");
+        if($sender->isOp()) {
+          foreach($this->getServer()->getOnlinePlayers() as $online){
+            $online->hidePlayer($player);
+            $sender->sendMessage(TextFormat::GREEN."You have been successfully Vanished!");
+          }
+        } else {
+          $sender->sendMessage(TextFormat::RED."Access Denied. You do not have the right permissions.");
         }
       }
       
       if($label === "unvanish") {
-        foreach($this->getServer()->getOnlinePlayers() as $online){
-          $online->showPlayer($player);
-          $sender->sendMessage(TextFormat::GREEN."You have been successfully Unvanished!");
+        if($sender->isOp()) {
+          foreach($this->getServer()->getOnlinePlayers() as $online){
+            $online->showPlayer($player);
+            $sender->sendMessage(TextFormat::GREEN."You have been successfully Unvanished!");
+          }
+        } else {
+          $sender->sendMessage(TextFormat::RED."Access Denied. You do not have the right permissions.");
         }
       }
     } else {
