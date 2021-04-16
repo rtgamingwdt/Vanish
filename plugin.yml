@@ -2,7 +2,7 @@ name: Vanish
 main: rtgamingwdt\Vanish\Main
 author: rtgamingwdt
 api: 3.14.0
-version: 1.0
+version: 1.0.0
 
 commands:
   vanish:
