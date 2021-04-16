@@ -22,7 +22,7 @@ class Main extends PluginBase {
     
   }
   
-  public function onCommand(CommandSender $sender, Command $cmd, String label, Array $args) : bool {
+  public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args) : bool {
     if($sender instanceof Player) {
       
       Player $player = $sender->getPlayer();
