@@ -25,11 +25,11 @@ class Main extends PluginBase {
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args) : bool {
     if($sender instanceof Player) {
       
-      Player $player = $sender->getPlayer();
+      $player = $sender->getPlayer();
       
       if($label === "vanish") {
-        Player online = Server.getOnlinePlayers();
-        online.hidePlayer(player);
+        $online = Server.getOnlinePlayers();
+        $online.hidePlayer($player);
         $sender->sendMessage(TextFormat::GREEN."You have successfully vanished!.");
         return true;
       }
