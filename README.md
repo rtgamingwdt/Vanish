@@ -9,7 +9,7 @@ _Releases [**Here**](https://github.com/svilex/SkyWars-PocketMine/releases) for 
 ### How to use
 
 ##### Installation
-**1.** Simpley Download the plugin phar and plop it in your plugins folder. You can get the phar in releases.<br/>
+**1.** Simply Download the plugin phar and plop it in your plugins folder. You can get the phar in releases.<br/>
 **2.** Now use /vanish or /unvanish<br/>
 **Notes.** You will need OP to use the command.<br/>
 
