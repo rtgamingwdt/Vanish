@@ -30,7 +30,7 @@ class Main extends PluginBase {
       $player = $sender->getPlayer();
       
       if($label === "vanish") {
-        $online = Server.getOnlinePlayers();
+        $online = $this->getServer()->getOnlinePlayers();
         $online.hidePlayer($player);
         $sender->sendMessage(TextFormat::GREEN."You have successfully vanished!.");
         return true;
